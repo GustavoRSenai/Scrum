@@ -1,0 +1,105 @@
+body{
+    color: #fff; /* cor das letras */
+    width: 100%;
+    height: 1000px;
+}
+a{
+    transition: 0.5s; /* Transicao ao clicar no link*/
+}
+#header{
+    /* define a posição tamanho e cor do header */
+    position: fixed;
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+    background-color: black;
+    text-align: center;
+}
+#header a{
+    color: white;
+    /* remove o sublinhado */
+    text-decoration: none;
+    /* Define tamnho, peso e margem do texto */
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+#header a:hover{
+    /* cor cinza ao passar o mousse por cima */
+    color: gray;
+}
+.header-container{
+    position: relative; /*definhe a posição como relativa*/
+    margin: 0;
+    width: 100%; /* largura do container*/
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.links{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.menu{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.usuario-header{
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+
+}
+.logo{
+    width: 50px;
+    margin-right: 20px;
+}
+section{
+    width: 100%;
+    height: 600px;
+    border-radius: 10px;
+    display: flex;
+}
+.login{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-area{
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    display: flex;
+    width: 600px;
+    height: 400px;
+    background-color: grey;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.login-area h1{
+    margin-top: 10px;
+}
+.usuario, .senha{
+    align-self: flex-start;
+    margin-left: 20px;
+}
+.senha p{
+    margin-bottom: 10px;
+}
+.usuario p{
+    margin-bottom: 10px;
+}
+.botao{
+    align-self: flex-start;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+}
