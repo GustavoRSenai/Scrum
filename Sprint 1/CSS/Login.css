@@ -14,13 +14,14 @@ a{
     padding: 20px 0;
     background-color: black;
     text-align: center;
+    z-index: 9;
 }
 #header a{
     color: white;
     /* remove o sublinhado */
     text-decoration: none;
     /* Define tamnho, peso e margem do texto */
-    font-size: 15px;
+    font-size: 20px;
     font-weight: bold;
     margin-left: 10px;
 }
@@ -56,6 +57,7 @@ a{
 .logo{
     width: 50px;
     margin-right: 20px;
+    border-radius: 5px;
 }
 section{
     width: 100%;
@@ -74,8 +76,8 @@ section{
     color: black;
     font-weight: bold;
     display: flex;
-    width: 600px;
-    height: 400px;
+    width: 700px;
+    height: 300px;
     background-color: grey;
     border-radius: 10px;
     align-items: center;
@@ -89,17 +91,40 @@ section{
     align-self: flex-start;
     margin-left: 20px;
 }
+.senha{
+    margin-bottom: 40px;
+}
 .senha p{
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 .usuario p{
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 .botao{
     align-self: flex-start;
-    width: 50%;
+    width: 54%;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
-
+    margin-bottom: 20px;
+}
+.botao :nth-child(1){
+    margin-left: 30px;
+    border-radius: 5px;
+    width: 150px;
+}
+.botao :nth-child(2){
+    border-radius: 5px;
+    width: 100px;
+}
+.texto{
+    width: 360px;
+    height: 35px;
+}
+.logo2{
+    width: 200px;
+    position: absolute;
+    align-self: flex-end;
+    margin-right: 40px;
+    bottom: 200px;
+    border-radius: 5px;
 }
