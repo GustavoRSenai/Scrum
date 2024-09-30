@@ -1,5 +1,5 @@
 # Scrum
-## Projeto Didático
+## Projeto Didático: Peça rara
 Este projeto é uma iniciativa didática desenvolvida para fins educacionais. Todo o conteúdo foi criado com base em pesquisa e aprendizado, e não se trata de plágio. A intenção é aplicar conceitos teóricos de maneira prática, estimulando a criatividade e a originalidade. Agradecemos a compreensão e incentivamos a apreciação do aprendizado envolvido neste trabalho.
 
 <div align="center">
