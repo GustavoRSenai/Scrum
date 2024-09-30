@@ -22,6 +22,13 @@ MIGUEL MERNICK OLIVEIRA (DEV) - Responsável pelo Programação e Readme
 
 # Nosso trabalho didático
 
+## Cronograma
+
+O cronograma foi realizado utilizando a plataforma [Figma](O cronograma foi realizado utilizando a plataforma [Trello](https://trello.com/pt-BR?campaign=19269516466&adgroup=148159506607&targetid=kwd-3609071522&matchtype=e&network=g&device=c&device_model=&creative=641463051732&keyword=trello&placement=&target=&ds_eid=700000001557344&ds_e1=GOOGLE&gad_source=1&gclid=Cj0KCQjwmOm3BhC8ARIsAOSbapWUUXH9gNSHReSfJl39ra0vfcci0OxNkfwm0nYx0ZxEAGASJQKWHA8aAtnPEALw_wcB) e pelo Excel, onde foi planejado o andamento e desenvolvimento do projeto. Foram desenvolvidas versões diferentes que acompanham os passos do projeto.) e pelo Excel, onde foi planejado o andamento e desenvolvimento do projeto. Foram desenvolvidas versões diferentes que acompanham os passos do projeto.
+
+![Uploading image.png…]()
+
+
 ## Desktop
 
 ![image](https://github.com/user-attachments/assets/4193dfd1-134d-4aca-b8eb-1c7aacc341fa)
