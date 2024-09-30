@@ -24,10 +24,9 @@ MIGUEL MERNICK OLIVEIRA (DEV) - Responsável pelo Programação e Readme
 
 ## Cronograma
 
-O cronograma foi realizado utilizando a plataforma [Figma](O cronograma foi realizado utilizando a plataforma [Trello](https://trello.com/pt-BR?campaign=19269516466&adgroup=148159506607&targetid=kwd-3609071522&matchtype=e&network=g&device=c&device_model=&creative=641463051732&keyword=trello&placement=&target=&ds_eid=700000001557344&ds_e1=GOOGLE&gad_source=1&gclid=Cj0KCQjwmOm3BhC8ARIsAOSbapWUUXH9gNSHReSfJl39ra0vfcci0OxNkfwm0nYx0ZxEAGASJQKWHA8aAtnPEALw_wcB) e pelo Excel, onde foi planejado o andamento e desenvolvimento do projeto. Foram desenvolvidas versões diferentes que acompanham os passos do projeto.) e pelo Excel, onde foi planejado o andamento e desenvolvimento do projeto. Foram desenvolvidas versões diferentes que acompanham os passos do projeto.
+O cronograma foi realizado utilizando a plataforma [Figma](https://trello.com/pt-BR?campaign=19269516466&adgroup=148159506607&targetid=kwd-3609071522&matchtype=e&network=g&device=c&device_model=&creative=641463051732&keyword=trello&placement=&target=&ds_eid=700000001557344&ds_e1=GOOGLE&gad_source=1&gclid=Cj0KCQjwmOm3BhC8ARIsAOSbapWUUXH9gNSHReSfJl39ra0vfcci0OxNkfwm0nYx0ZxEAGASJQKWHA8aAtnPEALw_wcB) e pelo Excel, onde foi planejado o andamento e desenvolvimento do projeto. Foram desenvolvidas versões diferentes que acompanham os passos do projeto.) e pelo Excel, onde foi planejado o andamento e desenvolvimento do projeto. Foram desenvolvidas versões diferentes que acompanham os passos do projeto.
 
-![Uploading image.png…]()
-
+![WhatsApp Image 2024-09-30 at 2 12 34 PM](https://github.com/user-attachments/assets/2e7c7356-c784-4215-bc7a-81fae0e1a7d5)
 
 ## Desktop
 
