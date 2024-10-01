@@ -98,11 +98,7 @@ section{
     align-self: flex-start;
     margin-left: 20px;
 }
-.email{
-    width: 350px;
-    height: 70px;
-    flex-direction: column;
-}
+
 .Form p{
     margin-bottom: 5px;
 }
@@ -141,17 +137,7 @@ section{
     border-radius: 5px;
     padding-left: 10px;
 }
-.senha2{
-    width: 330px;
-    height: 35px;
-    background-color: lightgrey;
-    border-radius: 5px;
-    padding-left: 10px;
-}
 .texto:hover{
-    background-color: #aaa9a9;
-}
-.senha2:hover{
     background-color: #aaa9a9;
 }
 .logo2{
@@ -161,6 +147,9 @@ section{
     margin-right: 40px;
     margin-top: 30px;
     border-radius: 10px;
+}
+#Fornecedor{
+    width: 640px;
 }
 @media (min-width:1024px) and (max-width:1113px) {
 
@@ -172,6 +161,9 @@ section{
    
     .logo{
         width: 40px;
+    }
+    #Fornecedor{
+        width: 640px;
     }
 }
 
@@ -242,17 +234,14 @@ section{
         border-radius: 10px;
         padding-left: 20px;
     }
-    .senha2{
-        width: 660px;
-        height: 70px;
-        border-radius: 10px;
-        padding-left: 20px;
-    }
     .logo2{
         width: 140px;
         margin-right: 80px;
         margin-top: 60px;
         border-radius: 20px;
+    }
+    #Fornecedor{
+        width: 1280px;
     }
 }  
 @media (min-width:768px) and (max-width:1023px){
@@ -283,13 +272,6 @@ section{
     .cadastro-area h2{
         font-size: 10px;
     }
-    .Form{
-        align-self: flex-start;
-        margin-left: 20px;
-    }
-    .Form p{
-        margin-bottom: 5px;
-    }
     .botao :nth-child(1){
         margin-left: 20px;
         margin-right: 20px;
@@ -306,15 +288,14 @@ section{
         border-radius: 5px;
         padding-left: 10px;
     }
-    .senha2{
-        width: 240px;
-        height: 30px;
-    }
     .logo2{
         width: 40px;
         margin-right: 20px;
         margin-top: 20px;
         border-radius: 10px;
+    }
+    #Fornecedor{
+        width: 550px;
     }
 }
 
@@ -363,13 +344,6 @@ section{
     .cadastro-area h2{
         font-size: 10px;
     }
-    .Form{
-        align-self: flex-start;
-        margin-left: 20px;
-    }
-    .Form p{
-        margin-bottom: 5px;
-    }
     .botao :nth-child(1){
         margin-left: 20px;
         margin-right: 20px;
@@ -386,9 +360,11 @@ section{
         border-radius: 5px;
         padding-left: 10px;
     }
-    .senha2{
-        width: 210px;
-        height: 30px;
+    .Form p{
+        font-size: 15px;
+    }
+    #Fornecedor{
+        width: 303px;
     }
 }
 @media screen and (max-width:320px){
@@ -431,13 +407,6 @@ section{
     .cadastro-area h2{
         font-size: 10px;
     }
-    .Form{
-        align-self: flex-start;
-        margin-left: 20px;
-    }
-    .Form p{
-        margin-bottom: 5px;
-    }
     .botao :nth-child(1){
         margin-left: 20px;
         margin-right: 20px;
@@ -454,8 +423,7 @@ section{
         border-radius: 5px;
         padding-left: 10px;
     }
-    .senha2{
-        width: 160px;
-        height: 30px;
+    #Fornecedor{
+        width: 240px;
     }
 }

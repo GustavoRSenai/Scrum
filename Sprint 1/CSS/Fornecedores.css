@@ -1,0 +1,273 @@
+body{
+    color: #fff; /* cor das letras */
+    width: 100%;
+    height: auto;
+    background-color: #F0C351;
+}
+a{
+    transition: 0.5s; /* Transicao ao clicar no link*/
+}
+#header{
+    /* define a posição tamanho e cor do header */
+    position: fixed;
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+    background-color: black;
+    text-align: center;
+    z-index: 9;
+}
+#header a{
+    color: white;
+    /* remove o sublinhado */
+    text-decoration: none;
+    /* Define tamnho, peso e margem do texto */
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+#header a:hover{
+    /* cor cinza ao passar o mousse por cima */
+    color: gray;
+}
+.header-container{
+    position: relative; /*definhe a posição como relativa*/
+    margin: 0;
+    width: 100%; /* largura do container*/
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.links{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.menu{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-left: 10px;
+}
+.usuario-header{
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+
+}
+.logo{
+    width: 50px;
+    margin-right: 20px;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+section{
+    width: 100%;
+    height: 550px;
+    border-radius: 10px;
+    display: flex;
+}
+.table-container h1{
+    color: black;
+    align-self: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.table-container {
+    justify-content: center;
+    align-self: center;
+    position: relative; /* Para posicionar o botão relativo à tabela */
+    width: 100%; /* Largura para telas menores */
+    max-width: 1000px; /* Largura máxima para telas maiores */
+    margin: 0 auto; 
+}
+
+table {
+    width: 100%; /* Tabela ocupa 100% do container */
+    background-color: white;
+}
+
+th, td {
+    color: black;
+    padding: 10px; 
+    text-align: left;
+    border: 2px solid #ccc; 
+}
+
+th {
+    background-color: #f2f2f2; 
+}
+
+button {
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.back-button {
+    padding: 10px 15px; 
+    background-color: #A6751B; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    transition: background-color 0.3s;
+    margin-top: 10px; /* Espaço acima do botão */
+    display: block; /* Faz o botão ocupar a linha inteira */
+    width: 20%; /* Botão ocupa 100% da largura do contêiner */
+}
+
+.back-button:hover {
+    background-color: #82590D;
+}
+
+.button-container {
+    text-align: center; /* Alinha o botão ao centro */
+    margin-top: 10px; /* Espaço acima do botão */
+}
+#Tabela{
+    overflow-x: auto;
+}
+@media (min-width:1920px) and (max-width:2560px){
+
+    #header a{font-size: 25px;}
+   
+    .header-container{
+        height: 80px;
+    }
+   
+    .logo{
+        width: 70px;
+        margin-right: 40px;
+    }
+    .table-container h1{
+        font-size: 40px;
+    }
+    th, td{
+        font-size: 20px;
+    }
+    .table-container{
+        max-width: 1500px;
+    }
+}
+@media (min-width:768px) and (max-width:1023px){
+
+    #header a{font-size: 12px;}
+   
+   .header-container{
+    height: 20px;
+   }
+   
+   .logo{
+    width: 40px;
+   }
+   .table-container{
+        width: 80%;
+        max-width: 500px;
+    }
+    .table-container h1{
+        font-size: 15px;
+    }
+}
+@media (min-width:321px) and (max-width:767px){
+    #header{
+        width: 100%;
+        height: 40px;
+    }
+    .usuario-header{
+        width: 0;
+        height: 0;
+    }
+    .usuario-header a{
+        visibility: hidden;
+    }
+    .usuario-header i{
+      visibility: hidden;
+    }
+
+    .barra{
+        font-size: 20px;
+    }
+    .header-container{
+        margin: 0;
+        width: 100%; /* largura do container*/
+        height: auto;
+    }
+    .logo{
+        width: 50px;
+    }
+    section{
+        width: 100%;
+    }
+    .table-container{
+        justify-content: center;
+        width: 80%;
+    }
+    .table-container h1{
+        font-size: 15px;
+    }
+    table{
+        margin: 0px;
+    }
+    th, td {
+        padding: 8px; /* Reduz o padding em telas menores */
+        font-size: 8px;
+        max-width: 40px;
+    }
+
+    .back-button {
+        padding: 5px; 
+        margin: 10px 0; /* Ajuste na margem do botão em telas pequenas */
+    }
+}
+
+    @media screen and (max-width:320px){
+        #header{
+            width: 100%;
+            height: 40px;
+        }
+        .usuario-header{
+            width: 0;
+            height: 0;
+        }
+        .usuario-header a{
+            visibility: hidden;
+        }
+        .usuario-header i{
+          visibility: hidden;
+        }
+        .logo{
+            width: 50px;
+        }
+    
+        .barra{
+            font-size: 15px;
+        }
+        .logo2{
+            visibility: hidden;
+        }
+        section{
+            height: 500px;
+                width: 100%;
+            }
+            .table-container{
+                justify-content: center;
+                width: 90%;
+            }
+            .table-container h1{
+                font-size: 15px;
+            }
+            table{
+                margin: 0px;
+            }
+            th, td {
+                padding: 8px; /* Reduz o padding em telas menores */
+                font-size: 8px;
+                max-width: 40px;
+            }
+        
+            .back-button {
+                padding: 5px; 
+                margin: 10px 0; /* Ajuste na margem do botão em telas pequenas */
+            }
+    }

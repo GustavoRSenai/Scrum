@@ -98,11 +98,7 @@ section{
     align-self: flex-start;
     margin-left: 20px;
 }
-.email{
-    width: 350px;
-    height: 70px;
-    flex-direction: column;
-}
+
 .Form p{
     margin-bottom: 5px;
 }
@@ -141,17 +137,7 @@ section{
     border-radius: 5px;
     padding-left: 10px;
 }
-.senha2{
-    width: 330px;
-    height: 35px;
-    background-color: lightgrey;
-    border-radius: 5px;
-    padding-left: 10px;
-}
 .texto:hover{
-    background-color: #aaa9a9;
-}
-.senha2:hover{
     background-color: #aaa9a9;
 }
 .logo2{
@@ -242,12 +228,6 @@ section{
         border-radius: 10px;
         padding-left: 20px;
     }
-    .senha2{
-        width: 660px;
-        height: 70px;
-        border-radius: 10px;
-        padding-left: 20px;
-    }
     .logo2{
         width: 140px;
         margin-right: 80px;
@@ -283,13 +263,6 @@ section{
     .cadastro-area h2{
         font-size: 10px;
     }
-    .Form{
-        align-self: flex-start;
-        margin-left: 20px;
-    }
-    .Form p{
-        margin-bottom: 5px;
-    }
     .botao :nth-child(1){
         margin-left: 20px;
         margin-right: 20px;
@@ -305,10 +278,6 @@ section{
         height: 30px;
         border-radius: 5px;
         padding-left: 10px;
-    }
-    .senha2{
-        width: 240px;
-        height: 30px;
     }
     .logo2{
         width: 40px;
@@ -363,13 +332,6 @@ section{
     .cadastro-area h2{
         font-size: 10px;
     }
-    .Form{
-        align-self: flex-start;
-        margin-left: 20px;
-    }
-    .Form p{
-        margin-bottom: 5px;
-    }
     .botao :nth-child(1){
         margin-left: 20px;
         margin-right: 20px;
@@ -385,10 +347,6 @@ section{
         height: 30px;
         border-radius: 5px;
         padding-left: 10px;
-    }
-    .senha2{
-        width: 210px;
-        height: 30px;
     }
 }
 @media screen and (max-width:320px){
@@ -431,13 +389,6 @@ section{
     .cadastro-area h2{
         font-size: 10px;
     }
-    .Form{
-        align-self: flex-start;
-        margin-left: 20px;
-    }
-    .Form p{
-        margin-bottom: 5px;
-    }
     .botao :nth-child(1){
         margin-left: 20px;
         margin-right: 20px;
@@ -453,9 +404,5 @@ section{
         height: 30px;
         border-radius: 5px;
         padding-left: 10px;
-    }
-    .senha2{
-        width: 160px;
-        height: 30px;
     }
 }
