@@ -18,8 +18,9 @@ GUSTAVO DA SILVA RODRIGUES (Scrum Master) - Responsável pela Programação
 
 GUSTAVO MAGALA GENEROSO (DEV) - Responsável pelo Figma Desktop/Celular
 
-MIGUEL MERNICK OLIVEIRA (DEV) - Responsável pelo Programação e Readme
+MIGUEL MERNICK OLIVEIRA (DEV) - Responsável pelo Programação, Readme e o Slide
 
+NICOLLY CRUZ BARBOSA (DEV) - Responsável pela documentação e o Kanban
 # Nosso trabalho didático
 
 ## Cronograma
