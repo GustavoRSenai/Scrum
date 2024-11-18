@@ -49,17 +49,25 @@ O cronograma foi realizado utilizando a plataforma [Figma](https://trello.com/pt
 
 Nesta sprint foi realizada a modelagem de dados e a programação em SQL, a modelagem foi feita para a criação de um banco de dados para armazenamento dos dados importantes do site como, Dados dos usuários, dados dos produtos e dados dos fornecedores.
 
+### Dicionário de dados.
+![image](https://github.com/user-attachments/assets/6ca97c2f-2174-40f5-9838-aaf2333a1983)
+> Um dicionário de dados é uma ferramenta ou documento que descreve detalhadamente os elementos de dados que são utilizados em um sistema de banco de dados ou aplicação. Ele serve como um repositório centralizado de informações sobre os dados, incluindo definições, tipos, formatos, restrições e relacionamentos, e ajuda a garantir que os dados sejam utilizados de maneira consistente e compreendida por todos os envolvidos no projeto (desenvolvedores, analistas, usuários, etc.).
+
+
 ### Modelagem conceitual.
 
 ![image](https://github.com/user-attachments/assets/77692e67-de7b-468e-ba00-3786f297f89f)
+> A modelagem de dados conceitual é a primeira fase do processo de modelagem de dados, que visa representar de forma abstrata e de alto nível as entidades, seus atributos e os relacionamentos entre elas, sem se preocupar com aspectos técnicos ou específicos de implementação. O objetivo principal dessa etapa é entender e capturar as necessidades de negócio, fornecendo uma visão clara do domínio de dados para as partes interessadas.
 
 ### Modelagem lógica.
 
 ![image](https://github.com/user-attachments/assets/5a38b133-d899-4c74-becc-1b7596d864fc)
+> A modelagem de dados lógica é a segunda fase no processo de modelagem de dados, ocorrendo após a modelagem conceitual. Seu objetivo é refinar o modelo de dados, representando-o de forma mais detalhada e adaptada a um tipo específico de sistema de gerenciamento de banco de dados (SGBD), mas sem se preocupar com a implementação física dos dados. A modelagem lógica é, portanto, uma transição entre a visão abstrata e a implementação real dos dados no sistema
 
 ### Programação em SQL.
 
 ![image](https://github.com/user-attachments/assets/291d7d4a-1545-48a1-98c8-fd9429ab9416)
 ![image](https://github.com/user-attachments/assets/986a0ada-dab9-4fa0-bcff-e88654b2aeec)
+> SQL (Structured Query Language) é uma linguagem de programação padrão usada para gerenciar e manipular bancos de dados relacionais. Ela permite que os usuários criem, modifiquem e consultem dados armazenados em tabelas dentro de um banco de dados. SQL é fundamental para interagir com sistemas de gerenciamento de banco de dados (SGBD), como MySQL, PostgreSQL, Oracle, SQL Server, entre outros.
 
 
