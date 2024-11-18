@@ -21,7 +21,7 @@ GUSTAVO MAGALA GENEROSO (DEV) - Responsável pelo Figma Desktop/Celular
 MIGUEL MERNICK OLIVEIRA (DEV) - Responsável pelo Programação, Readme e o Slide
 
 NICOLLY CRUZ BARBOSA (DEV) - Responsável pela documentação e o Kanban
-# Nosso trabalho didático
+# Nosso trabalho didático - Sprint 1
 
 ## Cronograma
 
@@ -44,3 +44,22 @@ O cronograma foi realizado utilizando a plataforma [Figma](https://trello.com/pt
 ![image](https://github.com/user-attachments/assets/dc3360e1-e056-472d-ad12-36b9a6cd9530)
 
 ![image](https://github.com/user-attachments/assets/37487692-11b4-4fea-a859-aafea418f604)
+
+# Nosso trabalho didático - Sprint 2
+
+Nesta sprint foi realizada a modelagem de dados e a programação em SQL, a modelagem foi feita para a criação de um banco de dados para armazenamento dos dados importantes do site como, Dados dos usuários, dados dos produtos e dados dos fornecedores.
+
+### Modelagem conceitual.
+
+![image](https://github.com/user-attachments/assets/77692e67-de7b-468e-ba00-3786f297f89f)
+
+### Modelagem lógica.
+
+![image](https://github.com/user-attachments/assets/5a38b133-d899-4c74-becc-1b7596d864fc)
+
+### Programação em SQL.
+
+![image](https://github.com/user-attachments/assets/291d7d4a-1545-48a1-98c8-fd9429ab9416)
+![image](https://github.com/user-attachments/assets/986a0ada-dab9-4fa0-bcff-e88654b2aeec)
+
+
