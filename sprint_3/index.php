@@ -9,15 +9,15 @@
     <!-- Link para o arquivo CSS para estilização da página -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body style="width: 100vw; height: 100vh;">
+<body style="background: url(assets/Fundo.jpg); background-repeat: repeat; background-size: cover;">
     
     <header>
         <div class="header">
             <ul class="menu">
                 <li><a href="index.php"><img class="logo" src="assets/logo.png" alt="logo"></a></li>
                 <li><a href="listagem_produtos.php">Produtos</a></li>
-                <li><a href="cadastro_fornecedor.php">Fornecedores</a></li>
-                <li><a href="cadastro_produto.php">Funcionarios</a></li>
+                <li><a href="listagem_fornecedores.php">Fornecedores</a></li>
+                <li><a href="listagem_funcionarios.php">Funcionários</a></li>
             </ul>
             <ul class="sair">
                 <li><a href="logout.php">Sair</a></li>
@@ -27,14 +27,5 @@
     <main>
         <h1><spam>BRECHÓ</spam> TEM MUITA CLASSE E É PRA QUEM SABE QUE O BOM GOSTO SE ENCONTRA AQUI</h1>
     </main>
-    <section class="fornecedores">
-        <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-    </section>
 </body>
 </html>

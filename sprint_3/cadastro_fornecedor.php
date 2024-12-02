@@ -141,10 +141,23 @@ if (isset($_GET['edit_id'])) {
 <head>
     <meta charset="UTF-8">
     <title>Cadastro de Fornecedor</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container" style="width: 900px;">
+<header>
+        <div class="header">
+            <ul class="menu">
+                <li><a href="index.php"><img class="logo" src="assets/logo.png" alt="logo"></a></li>
+                <li><a href="listagem_produtos.php">Produtos</a></li>
+                <li><a href="listagem_fornecedores.php">Fornecedores</a></li>
+                <li><a href="listagem_funcionarios.php">Funcionários</a></li>
+            </ul>
+            <ul class="sair">
+                <li><a href="logout.php">Sair</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="container">
         <h2>Cadastro de Fornecedor</h2>
         <!-- Formulário para cadastro/edição de fornecedor -->
         <form method="post" action="" enctype="multipart/form-data">
@@ -174,39 +187,8 @@ if (isset($_GET['edit_id'])) {
         if (isset($mensagem_erro)) echo "<p class='message error'>$mensagem_erro</p>";
         ?>
 
-        <h2>Listagem de Fornecedores</h2>
-        <!-- Tabela para listar os fornecedores cadastrados -->
-        <table>
-            <tr>
-                <th>ID</th>
-                <th>Nome</th>
-                <th>Email</th>
-                <th>Telefone</th>
-                <th>Imagem</th>
-                <th>Ações</th>
-            </tr>
-            <?php while ($row = $fornecedores->fetch_assoc()): ?>
-            <tr>
-                <td><?php echo $row['id']; ?></td>
-                <td><?php echo $row['nome']; ?></td>
-                <td><?php echo $row['email']; ?></td>
-                <td><?php echo $row['telefone']; ?></td>
-                <td>
-                    <?php if ($row['imagem']): ?>
-                        <img src="<?php echo $row['imagem']; ?>" alt="Imagem do fornecedor" class="thumbnail">
-                    <?php else: ?>
-                        Sem imagem
-                    <?php endif; ?>
-                </td>
-                <td>
-                    <a href="?edit_id=<?php echo $row['id']; ?>">Editar</a>
-                    <a href="?delete_id=<?php echo $row['id']; ?>" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
-                </td>
-            </tr>
-            <?php endwhile; ?>
-        </table>
-        <div class="actions">
-          <a href="index.php" class="back-button">Voltar</a>
+        <div class="botoes">
+          <a href="listagem_fornecedores.php" class="back-button">Voltar</a>
         </div>
     </div>
 </body>

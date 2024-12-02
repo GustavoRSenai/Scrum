@@ -3,7 +3,7 @@
 
 <?php
 if (isset($_GET['delete_id'])) {
-    $delete_id = $_GETI ['delete id'];
+    $delete_id = $_GET ['delete_id'];
     $sql = "DELETE FROM produtos WHERE id='$delete_id'";
 if ($conn->query($sql) === TRUE) {
     $mensagem = "Produto excluido com sucesso!";
@@ -22,15 +22,15 @@ if ($conn->query($sql) === TRUE) {
     <link rel="stylesheet" href="style.css">
     <title>Listagem de Produtos</title>
 </head>
-<body style="width: 100vw; height: 100vh;">
+<body>
 
     <header>
         <div class="header">
             <ul class="menu">
                 <li><a href="index.php"><img class="logo" src="assets/logo.png" alt="logo"></a></li>
                 <li><a href="listagem_produtos.php">Produtos</a></li>
-                <li><a href="cadastro_fornecedor.php">Fornecedores</a></li>
-                <li><a href="cadastro_produto.php">Funcionarios</a></li>
+                <li><a href="listagem_fornecedores.php">Fornecedores</a></li>
+                <li><a href="listagem_funcionarios.php">Funcionários</a></li>
             </ul>
             <ul class="sair">
                 <li><a href="logout.php">Sair</a></li>
@@ -40,7 +40,7 @@ if ($conn->query($sql) === TRUE) {
 
     <div class="container">
         <h2>Listagem de Produtos</h2>
-        <?php if (isset($mensagem)) echo "<p class='message" .($conn->error ? "error" : "success"). "'> $mensages</p>"; 
+        <?php if (isset($mensagem)) echo "<p class='message'" .($conn->error ? "error" : "success"). "'> $mensagem</p>"; 
         ?>
         
         <table>
@@ -74,8 +74,12 @@ if ($conn->query($sql) === TRUE) {
             </tr>
             <?php endwhile; ?>
             </table>
-            <a href="index.php" class="back-button">Voltar</a>
+            <div class="botoes">
+                <a href="index.php" class="back-button">Voltar</a>
+                <a href="cadastro_produto.php" class="back-button">Cadastrar</a>
             </div>
+            
+    </div>
 </body>
 </body>
 </html>

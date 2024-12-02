@@ -7,9 +7,9 @@
 </head>
 <body>
     <?php
-    $servername = "localhost:3306";
+    $servername = "localhost:3309";
     $username = "root";
-    $password = "1234";
+    $password = "";
     $dbname = "sistema";
 
     $conn = new mysqli($servername, $username, $password, $dbname);
