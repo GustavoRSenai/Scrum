@@ -73,5 +73,4 @@ if ($conn->query($sql) === TRUE) {
             
     </div>
 </body>
-</body>
 </html>

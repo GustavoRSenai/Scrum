@@ -28,9 +28,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 </head>
 <body >
     <main>
-        <div class="container" style="width: 500px;">
-        <div class="logoLogin"><img class="logo2" src="assets/logo.png" alt="logo"></div>
-            <div>
+        <div class="login">
+            <div class="logoLogin"><img class="logo2" src="assets/logo2.png" alt="logo"></div>
+            <div class="containercenter">
                 <h2>Login</h2>
                 <form method="post" action="">
                     <label for="nome"><p>Nome:</p></label>

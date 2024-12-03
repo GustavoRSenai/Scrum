@@ -43,6 +43,26 @@ body {
     z-index: -1;
     opacity: 0.5;
 }
+.login{
+    width: 650px;
+    top: 30px;
+    background-color: var(--background-color);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    border-radius: 15px;
+    position: relative;
+    opacity: 1.0;
+}
+.logo2{
+    width: 250px;
+    margin-top: 15px;
+    border-radius: 15px;
+}
 .container {
     top: 30px;
     background-color: var(--background-color);
@@ -52,13 +72,13 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    border-radius: 10px;
+    border-radius: 15px;
     position: relative;
     opacity: 1.0;
 }
 .header{
     background-color: var(--primary-color);
-    width: 100%;
+    max-width: 100vw;
     max-height: 80px;
     margin: 0 auto;
     top: 0;
@@ -290,4 +310,54 @@ button:hover{
 }
 .loginmsg p {
     text-align: center;
+}
+.containercenter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media (min-width:768px) and (max-width:1023px) {
+    .login{
+        width: 550px; 
+    }
+    .logo2{
+        width: 200px;
+    }
+    .menu li a{
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width:425px){
+
+    .login{
+        width: 280px;
+        flex-direction: column;
+        height: 350px;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .logo2{
+       visibility: hidden;
+    }
+    .header{
+        width: 200px;
+        background-color: #c0392b;
+    }
+    .menu{
+        width: 20%;
+    }
+    main h1{
+        font-size: 10px;
+    }
+    .logo{
+        width: 80px;
+    }
+}
+@media only screen and (max-width:767px) and (min-width:426px){
+    .login{
+        width: 550px;
+    }
+    .logo2{
+        width: 200px;
+    }
 }
