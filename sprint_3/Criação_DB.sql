@@ -12,8 +12,9 @@ CREATE TABLE funcionarios (
 CREATE TABLE fornecedores (
     id INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(100) NOT NULL,
-    email VARCHAR(100),
-    senha VARCHAR(20) 
+    email VARCHAR(100) NOT NULL,
+    telefone VARCHAR(20),
+    CNPJ VARCHAR(20) NOT NULL
 );
 
 CREATE TABLE produtos (
@@ -22,6 +23,8 @@ CREATE TABLE produtos (
     nome VARCHAR(100) NOT NULL,
     descricao TEXT,
     preco DECIMAL(10, 2),
+    estado VARCHAR(20),
+    quantidade NUMERIC(10),
     FOREIGN KEY (fornecedor_id) REFERENCES fornecedores(id)
 );
 
@@ -30,3 +33,5 @@ INSERT INTO funcionarios (usuario, email, senha) VALUES ('Felipe',  'Felipe@emai
 INSERT INTO funcionarios (usuario, email, senha) VALUES ('Gustavo Magalas', 'GustavoM@email.com', MD5('123'));
 INSERT INTO funcionarios (usuario, email, senha) VALUES ('Gustavo Rodrigues', 'GustavoR@email.com', MD5('123'));
 INSERT INTO funcionarios (usuario, email, senha) VALUES ('Nicolly', 'Nicolly@email.com', MD5('123'));
+
+

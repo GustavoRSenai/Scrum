@@ -51,30 +51,23 @@ if (isset($_GET['edit_id'])) {
     $funcionario = $conn->query("SELECT * FROM funcionarios WHERE id='$edit_id'")->fetch_assoc();
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Cadastro de Fornecedor</title>
+    <title>Painel Principal</title>
+    <!-- Link para o arquivo CSS para estilização da página -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-        <div class="header">
-            <ul class="menu">
-                <li><a href="index.php"><img class="logo" src="assets/logo.png" alt="logo"></a></li>
-                <li><a href="listagem_produtos.php">Produtos</a></li>
-                <li><a href="listagem_fornecedores.php">Fornecedores</a></li>
-                <li><a href="listagem_funcionarios.php">Funcionários</a></li>
-            </ul>
-            <ul class="sair">
-                <li><a href="logout.php">Sair</a></li>
-            </ul>
-        </div>
-    </header>
+<?php include('header.html'); ?>
     <div class="container">
-        <h2>Cadastro de Fornecedor</h2>
+        <h2>Cadastro de Funcionários</h2>
+
+        <?php
+        if (isset($mensagem)) echo "<p class='message " . (strpos($mensagem, 'Erro') !== false ? "error" : "success") . "'>$mensagem</p>";
+        if (isset($mensagem_erro)) echo "<p class='message error'>$mensagem_erro</p>";
+        ?>
         <!-- Formulário para cadastro/edição de fornecedor -->
         <form method="post" action="" enctype="multipart/form-data">
             <input type="hidden" name="id" value="<?php echo $funcionario['id'] ?? ''; ?>">
@@ -92,10 +85,7 @@ if (isset($_GET['edit_id'])) {
         </form>
         
         <!-- Exibe mensagens de sucesso ou erro -->
-        <?php
-        if (isset($mensagem)) echo "<p class='message " . (strpos($mensagem, 'Erro') !== false ? "error" : "success") . "'>$mensagem</p>";
-        if (isset($mensagem_erro)) echo "<p class='message error'>$mensagem_erro</p>";
-        ?>
+    
 
         <div class="botoes">
           <a href="listagem_funcionarios.php" class="back-button">Voltar</a>

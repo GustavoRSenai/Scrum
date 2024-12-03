@@ -73,6 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nome = $_POST['nome'];
     $email = $_POST['email'];
     $telefone = $_POST['telefone'];
+    $CNPJ = $_POST['CNPJ'];
 
     // Processa o upload da imagem
     $imagem = "";
@@ -88,7 +89,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Prepara a query SQL para inserção ou atualização
     if ($id) {
         // Se o ID existe, é uma atualização
-        $sql = "UPDATE fornecedores SET nome='$nome', email='$email', telefone='$telefone'";
+        $sql = "UPDATE fornecedores SET nome='$nome', email='$email', telefone='$telefone', CNPJ='$CNPJ'";
         if($imagem) {
             $sql .= ", imagem='$imagem'";
         }
@@ -96,7 +97,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $mensagem = "Fornecedor atualizado com sucesso!";
     } else {
         // Se não há ID, é uma nova inserção
-        $sql = "INSERT INTO fornecedores (nome, email, telefone, imagem) VALUES ('$nome', '$email', '$telefone', '$imagem')";
+        $sql = "INSERT INTO fornecedores (nome, email, telefone, CNPJ, imagem) VALUES ('$nome', '$email', '$telefone', '$CNPJ', '$imagem')";
         $mensagem = "Fornecedor cadastrado com sucesso!";
     }
 
@@ -135,30 +136,23 @@ if (isset($_GET['edit_id'])) {
     $fornecedor = $conn->query("SELECT * FROM fornecedores WHERE id='$edit_id'")->fetch_assoc();
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Cadastro de Fornecedor</title>
+    <title>Painel Principal</title>
+    <!-- Link para o arquivo CSS para estilização da página -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-        <div class="header">
-            <ul class="menu">
-                <li><a href="index.php"><img class="logo" src="assets/logo.png" alt="logo"></a></li>
-                <li><a href="listagem_produtos.php">Produtos</a></li>
-                <li><a href="listagem_fornecedores.php">Fornecedores</a></li>
-                <li><a href="listagem_funcionarios.php">Funcionários</a></li>
-            </ul>
-            <ul class="sair">
-                <li><a href="logout.php">Sair</a></li>
-            </ul>
-        </div>
-    </header>
+<?php include('header.html'); ?>
     <div class="container">
-        <h2>Cadastro de Fornecedor</h2>
+        <h2>Cadastro de Fornecedores</h2>
+          <!-- Exibe mensagens de sucesso ou erro -->
+          <?php
+        if (isset($mensagem)) echo "<p class='message " . (strpos($mensagem, 'Erro') !== false ? "error" : "success") . "'>$mensagem</p>";
+        if (isset($mensagem_erro)) echo "<p class='message error'>$mensagem_erro</p>";
+        ?>
         <!-- Formulário para cadastro/edição de fornecedor -->
         <form method="post" action="" enctype="multipart/form-data">
             <input type="hidden" name="id" value="<?php echo $fornecedor['id'] ?? ''; ?>">
@@ -171,6 +165,9 @@ if (isset($_GET['edit_id'])) {
             
             <label for="telefone">Telefone:</label>
             <input type="text" name="telefone" value="<?php echo $fornecedor['telefone'] ?? ''; ?>">
+
+            <label for="CNPJ">CNPJ:</label>
+            <input type="text" name="CNPJ" minlength="18" maxlength="18" value="<?php echo $fornecedor['CNPJ'] ?? ''; ?>">
             
             <label for="imagem">Imagem:</label>
             <input type="file" name="imagem" accept="image/*">
@@ -178,15 +175,8 @@ if (isset($_GET['edit_id'])) {
                 <img src="<?php echo $fornecedor['imagem']; ?>" alt="Imagem atual do fornecedor" class="update-image">
             <?php endif; ?>
             <br>
-            <button type="submit"><?php echo $fornecedor ? 'Atualizar' : 'Cadastrar'; ?></button>
+            <button type="submit" onclick="location.href'listagem_fornecedores.php'"><?php echo $fornecedor ? 'Atualizar' : 'Cadastrar'; ?></button>
         </form>
-        
-        <!-- Exibe mensagens de sucesso ou erro -->
-        <?php
-        if (isset($mensagem)) echo "<p class='message " . (strpos($mensagem, 'Erro') !== false ? "error" : "success") . "'>$mensagem</p>";
-        if (isset($mensagem_erro)) echo "<p class='message error'>$mensagem_erro</p>";
-        ?>
-
         <div class="botoes">
           <a href="listagem_fornecedores.php" class="back-button">Voltar</a>
         </div>

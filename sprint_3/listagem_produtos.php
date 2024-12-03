@@ -11,33 +11,19 @@ if ($conn->query($sql) === TRUE) {
     $mensagem = "Erro ao excluir produto: " . $conn->error;
  }
 }
-    $produtos = $conn->query("SELECT p.id, p.nome, p.descricao, p.preco, p.imagem, f.nome AS fornecedor_nome FROM produtos p JOIN fornecedores f ON p.fornecedor_id = f.id");
+    $produtos = $conn->query("SELECT p.id, p.nome, p.descricao, p.preco, p.estado, p.quantidade, p.imagem, f.nome AS fornecedor_nome FROM produtos p JOIN fornecedores f ON p.fornecedor_id = f.id");
 
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <title>Painel Principal</title>
+    <!-- Link para o arquivo CSS para estilização da página -->
     <link rel="stylesheet" href="style.css">
-    <title>Listagem de Produtos</title>
 </head>
 <body>
-
-    <header>
-        <div class="header">
-            <ul class="menu">
-                <li><a href="index.php"><img class="logo" src="assets/logo.png" alt="logo"></a></li>
-                <li><a href="listagem_produtos.php">Produtos</a></li>
-                <li><a href="listagem_fornecedores.php">Fornecedores</a></li>
-                <li><a href="listagem_funcionarios.php">Funcionários</a></li>
-            </ul>
-            <ul class="sair">
-                <li><a href="logout.php">Sair</a></li>
-            </ul>
-        </div>
-    </header>
-
+<?php include('header.html'); ?>
     <div class="container">
         <h2>Listagem de Produtos</h2>
         <?php if (isset($mensagem)) echo "<p class='message'" .($conn->error ? "error" : "success"). "'> $mensagem</p>"; 
@@ -50,6 +36,8 @@ if ($conn->query($sql) === TRUE) {
                 <th>Descrição</th>
                 <th>Preço</th>
                 <th>Fornecedor</th>
+                <th>Estado</th>
+                <th>Quantidade em estoque</th>
                 <th>Imagem</th>
                 <th>Ações</th>
             </tr>
@@ -60,6 +48,8 @@ if ($conn->query($sql) === TRUE) {
                 <td><?php echo $row['descricao'];?></td>
                 <td><?php echo $row['preco']; ?></td>
                 <td><?php echo $row['fornecedor_nome']; ?></td>
+                <td><?php echo $row['estado'];?></td>
+                <td><?php echo $row['quantidade'];?></td>
                 <td>
                     <?php if ($row['imagem']): ?>
                         <img src="<?php echo $row['imagem']; ?>" alt="Imagem do produto" style="max-width: 100px;">

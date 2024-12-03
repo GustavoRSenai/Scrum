@@ -76,8 +76,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $fornecedor_id = $_POST['fornecedor_id'];
     $nome = $_POST['nome'];
     $descricao = $_POST['descricao'];
-    $preco = str_replace(',', '.', $_POST['preco']); // Converte vírgula para ponto
     $estado = $_POST['estado'];
+    $quantidade = $_POST['quantidade'];
+    $preco = str_replace(',', '.', $_POST['preco']); // Converte vírgula para ponto
 
     // Processa o upload da imagem
     $imagem = "";
@@ -89,12 +90,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $mensagem_erro = $resultado_upload;
         }
     }
-
+    
     // Prepara a query SQL para inserção ou atualização
     if ($id) {
         // Se o ID existe, é uma atualização
-        $sql = "UPDATE produtos SET fornecedor_id=?, nome=?, descricao=?, preco=?, estado=?";
-        $params = [$fornecedor_id, $nome, $descricao, $preco, $estado];
+        $sql = "UPDATE produtos SET fornecedor_id=?, nome=?, descricao=?, preco=?";
+        $params = [$fornecedor_id, $nome, $descricao, $preco];
         if($imagem) {
             $sql .= ", imagem=?";
             $params[] = $imagem;
@@ -106,9 +107,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $mensagem = "Produto atualizado com sucesso!";
     } else {
         // Se não há ID, é uma nova inserção
-        $sql = "INSERT INTO produtos (fornecedor_id, nome, descricao, preco, estado, imagem) VALUES (?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO produtos (fornecedor_id, nome, descricao, preco, imagem, estado, quantidade) VALUES (?, ?, ?, ?, ?, ?, ?)";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("issss", $fornecedor_id, $nome, $descricao, $preco, $estado, $imagem);
+        $stmt->bind_param("issssss", $fornecedor_id, $nome, $descricao, $preco, $imagem, $estado, $quantidade);
         $mensagem = "Produto cadastrado com sucesso!";
     }
 
@@ -137,7 +138,7 @@ if (isset($_GET['delete_id'])) {
 }
 
 // Busca todos os produtos para listar na tabela
-$produtos = $conn->query("SELECT p.id, p.nome, p.descricao, p.preco, p.estado, p.imagem, f.nome AS fornecedor_nome FROM produtos p JOIN fornecedores f ON p.fornecedor_id = f.id");
+$produtos = $conn->query("SELECT p.id, p.nome, p.descricao, p.estado, p.quantidade, p.preco, p.imagem, f.nome AS fornecedor_nome FROM produtos p JOIN fornecedores f ON p.fornecedor_id = f.id");
 
 // Se foi solicitada a edição de um produto, busca os dados dele
 $produto = null;
@@ -154,29 +155,16 @@ if (isset($_GET['edit_id'])) {
 // Busca todos os fornecedores para o select do formulário
 $fornecedores = $conn->query("SELECT id, nome FROM fornecedores");
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Produto</title>
+    <title>Painel Principal</title>
+    <!-- Link para o arquivo CSS para estilização da página -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="header">
-            <ul class="menu">
-                <li><a href="index.php"><img class="logo" src="assets/logo.png" alt="logo"></a></li>
-                <li><a href="listagem_produtos.php">Produtos</a></li>
-                <li><a href="listagem_fornecedores.php">Fornecedores</a></li>
-                <li><a href="listagem_funcionarios.php">Funcionários</a></li>
-            </ul>
-            <ul class="sair">
-                <li><a href="logout.php">Sair</a></li>
-            </ul>
-        </div>
-    </header>
+<?php include('header.html'); ?>
     <div class="container">
         <h2>Cadastro de Produto</h2>
         <?php if (isset($mensagem)): ?>
@@ -199,24 +187,32 @@ $fornecedores = $conn->query("SELECT id, nome FROM fornecedores");
             <label for="descricao">Descrição:</label>
             <textarea name="descricao"><?php echo $produto['descricao'] ?? ''; ?></textarea>
             
-            <label for="preco">Preço:</label>
-            <input type="text" name="preco" value="<?php echo $produto['preco'] ?? ''; ?>" required>
-            
             <label for="estado">Estado:</label>
             <select name="estado" required>
+                <option value="antiga"><?php echo $produto['estado'] ?? ''; ?></option>
                 <option value="Usado">Usado</option>
                 <option value="Semi-novo">Pequenas avarias</option>
                 <option value="Novo">Novo</option>
             </select>
 
+            <label for="quantidade">Quantidade em estoque:</label>
+            <input type="number" name="quantidade" value="<?php echo $produto['quantidade'] ?? ''; ?>" required>
+
+            <label for="preco">Preço:</label>
+            <input type="text" name="preco" value="<?php echo $produto['preco'] ?? ''; ?>" required>
+            
             <label for="imagem">Imagem:</label>
             <input type="file" name="imagem" accept="image/*">
             <?php if (isset($produto['imagem']) && $produto['imagem']): ?>
                 <img src="<?php echo $produto['imagem']; ?>" alt="Imagem atual do produto" class="update-image">
             <?php endif; ?>
             <br>
-                <button type="submit" ><?php echo $produto ? 'Atualizar' : 'Cadastrar'; ?></button>
+            <button type="submit"><?php echo $produto ? 'Atualizar' : 'Cadastrar'; ?></button>
         </form>
+        
+        <!-- Exibe mensagens de sucesso ou erro -->
+        
+
         <a href="listagem_produtos.php" class="back-button">Voltar</a>
     </div>
 </body>

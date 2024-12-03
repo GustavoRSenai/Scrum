@@ -22,25 +22,12 @@ if ($conn->query($sql) === TRUE) {
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <title>Painel Principal</title>
+    <!-- Link para o arquivo CSS para estilização da página -->
     <link rel="stylesheet" href="style.css">
-    <title>Listagem de Fornecedores</title>
 </head>
 <body>
-
-    <header>
-        <div class="header">
-            <ul class="menu">
-                <li><a href="index.php"><img class="logo" src="assets/logo.png" alt="logo"></a></li>
-                <li><a href="listagem_produtos.php">Produtos</a></li>
-                <li><a href="listagem_fornecedores.php">Fornecedores</a></li>
-                <li><a href="listagem_funcionarios.php">Funcionários</a></li>
-            </ul>
-            <ul class="sair">
-                <li><a href="logout.php">Sair</a></li>
-            </ul>
-        </div>
-    </header>
-
+<?php include('header.html'); ?>
     <div class="container">
         <h2>Listagem de Fornecedores</h2>
         <?php if (isset($mensagem)) echo "<p class='message'" .($conn->error ? "error" : "success"). "'> $mensagem</p>"; 
@@ -54,6 +41,7 @@ if ($conn->query($sql) === TRUE) {
                 <th>Nome</th>
                 <th>E-mail</th>
                 <th>Telefone</th>
+                <th>CNPJ</th>
                 <th>Imagem</th>
                 <th>Ações</th>
             </tr>
@@ -63,6 +51,7 @@ if ($conn->query($sql) === TRUE) {
                 <td><?php echo $row['nome']; ?></td>
                 <td><?php echo $row['email'];?></td>
                 <td><?php echo $row['telefone']; ?></td>
+                <td><?php echo $row['CNPJ']; ?></td>
                 <td>
                     <?php if ($row['imagem']): ?>
                         <img src="<?php echo $row['imagem']; ?>" alt="Imagem do fornecedor" style="max-width: 100px;">
