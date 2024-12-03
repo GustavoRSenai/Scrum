@@ -103,4 +103,51 @@ Nesta sprint foi realizada a modelagem de dados e a programação em SQL, a mode
 ![image](https://github.com/user-attachments/assets/986a0ada-dab9-4fa0-bcff-e88654b2aeec)
 > SQL (Structured Query Language) é uma linguagem de programação padrão usada para gerenciar e manipular bancos de dados relacionais. Ela permite que os usuários criem, modifiquem e consultem dados armazenados em tabelas dentro de um banco de dados. SQL é fundamental para interagir com sistemas de gerenciamento de banco de dados (SGBD), como MySQL, PostgreSQL, Oracle, SQL Server, entre outros.
 
+# Nosso Trabalho Didático - Sprint 3
+
+Na Sprint 3, nosso foco foi na implementação do **sistema de cadastro**, tanto para **usuários**, **fornecedores**, quanto para **produtos**, utilizando as tecnologias definidas nas sprints anteriores. A partir da modelagem de dados e da estrutura do banco de dados criadas nas sprints anteriores, começamos a construir as funcionalidades básicas para permitir o cadastro de informações importantes no sistema.
+
+## Funcionalidades Implementadas
+
+### 1. **Cadastro de Usuários**
+- O sistema agora permite o **cadastro de usuários**, com os seguintes campos:
+  - **Nome**
+  - **E-mail**
+  - **Senha**
+  - **Tipo de usuário** (Admin, Fornecedor, Cliente)
+  
+O processo de cadastro garante que os dados dos usuários sejam armazenados de maneira segura no banco de dados, além de fornecer um fluxo de autenticação e autorização.
+
+### 2. **Cadastro de Fornecedores**
+- A funcionalidade de **cadastro de fornecedores** foi implementada, permitindo a inclusão de dados relevantes sobre os fornecedores, tais como:
+  - **Nome da empresa**
+  - **CNPJ**
+  - **Telefone**
+  - **E-mail**
+  - **Endereço**
+
+Isso permite à plataforma gerenciar fornecedores de forma eficiente.
+
+### 3. **Cadastro de Produtos**
+- A funcionalidade de **cadastro de produtos** foi criada, permitindo armazenar as seguintes informações:
+  - **Nome do produto**
+  - **Categoria**
+  - **Preço**
+  - **Quantidade**
+  - **Descrição**
+
+Esses dados são essenciais para gerenciar o inventário e fornecer informações detalhadas sobre os produtos aos usuários.
+
+## Tecnologias Utilizadas
+
+- **Frontend**: HTML, CSS
+- **Backend**: PHP
+- **Banco de Dados**: MySQL
+- **Controle de Sessões**: PHP Sessions
+- **Autenticação de Usuário**: Hashing de senhas com `password_hash` e `password_verify` (PHP)
+
+## Estrutura do Projeto
+
+A estrutura do projeto foi organizada da seguinte forma:
+
 
