@@ -24,6 +24,7 @@ CREATE TABLE produtos (
     descricao TEXT,
     preco DECIMAL(10, 2),
     estado VARCHAR(20),
+    quantidade NUMERIC(10),
     FOREIGN KEY (fornecedor_id) REFERENCES fornecedores(id)
 );
 
