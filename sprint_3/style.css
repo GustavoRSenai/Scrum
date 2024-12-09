@@ -316,48 +316,91 @@ button:hover{
     flex-direction: column;
     align-items: center;
 }
-@media (min-width:768px) and (max-width:1023px) {
-    .login{
-        width: 550px; 
+@media screen and (min-width: 1200px) {
+    table{
+        overflow: auto;
     }
-    .logo2{
+    .container {
+        max-width: 1200px;
+    }
+    .login {
+        width: 550px;
+    }
+    .logo2 {
         width: 200px;
     }
-    .menu li a{
+    .menu li a {
+        font-size: 15px;
+    }
+    }
+@media (min-width: 1200px) {
+    table{
+        overflow: auto;
+    }
+    .container {
+        width: 1100px;
+    }
+    .login {
+        width: 550px;
+    }
+    .logo2 {
+        width: 200px;
+    }
+    .menu li a {
         font-size: 15px;
     }
 }
-@media only screen and (max-width:425px){
-
-    .login{
-        width: 280px;
-        flex-direction: column;
-        height: 350px;
-        flex-direction: column-reverse;
-        align-items: center;
+@media (min-width:991px) and (max-width:1199px){
+    table{
+        overflow: auto;
     }
-    .logo2{
-       visibility: hidden;
+    .container {
+        width: 950px;
     }
-    .header{
-        width: 200px;
-        background-color: #c0392b;
-    }
-    .menu{
-        width: 20%;
-    }
-    main h1{
-        font-size: 10px;
-    }
-    .logo{
-        width: 80px;
-    }
-}
-@media only screen and (max-width:767px) and (min-width:426px){
-    .login{
+    .login {
         width: 550px;
     }
-    .logo2{
+    .logo2 {
         width: 200px;
+    }
+    .menu li a {
+        font-size: 15px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px){
+    table{
+        overflow: auto;
+    }
+    .container {
+        width: 750px;
+    }
+    .login {
+        width: 550px;
+    }
+    .logo2 {
+        width: 200px;
+    }
+    .menu li a {
+        font-size: 15px;
+    }
+}
+@media (max-width: 768px) {
+    table{
+        overflow: auto;
+    }
+    .container {
+        width: 750px;
+    }
+    .login {
+        width: 550px;
+    }
+    .logo2 {
+        width: 200px;
+    }
+    .menu li a {
+        font-size: 15px;
+    }
+    * {
+        font-size: 16px;
     }
 }
