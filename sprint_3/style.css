@@ -282,7 +282,7 @@ select {
     font-size: 16px;
     box-shadow: 1px 1px 1px black;
 }
-input[type="image"]{
+input[type="file"]{
     color: var(--secondary-color);
 }
 button{
