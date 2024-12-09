@@ -317,9 +317,6 @@ button:hover{
     align-items: center;
 }
 @media screen and (min-width: 1200px) {
-    table{
-        overflow: auto;
-    }
     .container {
         max-width: 1200px;
     }
@@ -334,9 +331,6 @@ button:hover{
     }
     }
 @media (min-width: 1200px) {
-    table{
-        overflow: auto;
-    }
     .container {
         width: 1100px;
     }
@@ -351,9 +345,6 @@ button:hover{
     }
 }
 @media (min-width:991px) and (max-width:1199px){
-    table{
-        overflow: auto;
-    }
     .container {
         width: 950px;
     }
@@ -368,11 +359,9 @@ button:hover{
     }
 }
 @media (min-width: 768px) and (max-width: 991px){
-    table{
-        overflow: auto;
-    }
     .container {
         width: 750px;
+        padding: 15px 30px;
     }
     .login {
         width: 550px;
@@ -383,13 +372,14 @@ button:hover{
     .menu li a {
         font-size: 15px;
     }
+    th, td {
+        font-size: 14px;
+    }
 }
 @media (max-width: 768px) {
-    table{
-        overflow: auto;
-    }
     .container {
         width: 750px;
+        padding: 15px 30px;
     }
     .login {
         width: 550px;
@@ -402,5 +392,8 @@ button:hover{
     }
     * {
         font-size: 16px;
+    }
+    th,td{
+        font-size: 10px;
     }
 }
