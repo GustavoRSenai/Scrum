@@ -3,13 +3,21 @@
 
 <?php
 if (isset($_GET['delete_id'])) {
-    $delete_id = $_GET ['delete_id'];
-    $sql = "DELETE FROM fornecedores WHERE id='$delete_id'";
-if ($conn->query($sql) === TRUE) {
-    $mensagem = "Fornecedor excluido com sucesso!";
- } else {
-    $mensagem = "Erro ao excluir Fornecedor: " . $conn->error;
- }
+    $delete_id = $_GET['delete_id'];
+    
+    // Verifica se o fornecedor tem produtos cadastrados
+    $check_produtos = $conn->query("SELECT COUNT(*) as count FROM produtos WHERE fornecedor_id = '$delete_id'")->fetch_assoc();
+    
+    if ($check_produtos['count'] > 0) {
+        $mensagem = "Não é possível excluir este fornecedor pois existem produtos cadastrados para ele.";
+    } else {
+        $sql = "DELETE FROM fornecedores WHERE id='$delete_id'";
+        if ($conn->query($sql) === TRUE) {
+            $mensagem = "Fornecedor excluído com sucesso!";
+        } else {
+            $mensagem = "Erro ao excluir fornecedor: " . $conn->error;
+        }
+    }
 }
     // ALTERADO A CONEXÃO 
 
